@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto&display=swap");
+
+body {
+  color: #ffffff;
+  font-family: "Roboto";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gameboard-wrapper {
+  background-color: rgb(52, 25, 82);
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.gameboard-board {
+  border: 3px solid #e96d77;
+  height: 90vh;
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0.4vh 0.4vw;
+  height: 28vh;
+  width: 10vw;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card h1 {
   color: white;
+  font-size: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.card.active {
+  filter: blur(8px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #e96d77;
+  font-size: 2rem;
 }
